@@ -32,7 +32,9 @@
 		
 		<main></main>
 
-		<footer></footer>	
+		<footer>
+			<p>&copy;<?php echo date("Y"); ?> FILIPE MENDES. ALL RIGHTS RESERVED </p>
+		</footer>	
 			
 	</body>
 </html>

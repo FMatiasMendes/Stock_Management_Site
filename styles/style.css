@@ -1,5 +1,6 @@
 :root {
   --text-color: rgb(48, 150, 99);
+	--border-color: rgba(130, 128, 128, 0.75);
   --font-size: 16px;
 	--font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -12,10 +13,12 @@
 body{
 	background-color: hsla(0, 3%, 94%, 0.5);
 	min-width: 1200px;
+	height: 100%;
 }
 
 .outer-border{
-	border: 2px solid black;
+	border: 3px solid;
+	border-color: var(--border-color);
 	border-radius: 20px;
 	margin: 20px 5% 0px 5%;
 	padding: 40px 20px;
@@ -31,7 +34,7 @@ body{
 	list-style-type: none;
 	display: flex;
 	justify-content: center;
-	gap: 20px;
+	gap: 40px;
 	margin-top: 50px;
 }
 
@@ -48,10 +51,25 @@ body{
 	cursor: pointer;
 	text-align: center;
 	white-space: nowrap;
+	font-size: 16px;
+	transition: 0.5s ease;
 }
 
 .nav-links li a:hover{
 	color: cyan;
+}
+
+
+
+
+
+footer{
+	font-family: (--font-family);
+	display: block;
+	justify-items: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 
