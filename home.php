@@ -30,7 +30,13 @@
 
 		</header>
 		
-		<main></main>
+		<main>
+
+			<div class="outer-border">
+				<p class="welcome-message">Welcome Filipe!</p>
+			</div>
+
+		</main>
 
 		<footer>
 			<p>&copy;<?php echo date("Y"); ?> FILIPE MENDES. ALL RIGHTS RESERVED </p>

@@ -16,11 +16,13 @@ body{
 	height: 100%;
 }
 
+/* header */
+
 .outer-border{
 	border: 3px solid;
 	border-color: var(--border-color);
 	border-radius: 20px;
-	margin: 20px 5% 0px 5%;
+	margin: 20px 5% 40px 5%;
 	padding: 40px 20px;
 }
 
@@ -59,17 +61,38 @@ body{
 	color: cyan;
 }
 
+/* main */
+
+.welcome-message{
+	color: var(--text-color);
+	text-align: center;
+	text-transform: uppercase;
+	font-family: var(--font-family);
+}
 
 
 
+
+
+
+
+
+
+/* footer */
 
 footer{
-	font-family: (--font-family);
+	font-family: var(--font-family);
 	display: block;
 	justify-items: center;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	margin: 10px;
+}
+
+footer p{
+	color: var(--text-color);
+	font-size: 12px;
 }
 
 
