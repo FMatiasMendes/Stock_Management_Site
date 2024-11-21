@@ -11,7 +11,7 @@
 	<body>
 
 		<header>
-			<?php require("components/header.php") ?>
+			<?php require("components/header.php"); ?>
 		</header>
 		
 		<main>
@@ -26,7 +26,7 @@
 		</main>
 
 		<footer>
-			<?php require("components/footer.php") ?>
+			<?php require("components/footer.php"); ?>
 		</footer>	
 			
 	</body>

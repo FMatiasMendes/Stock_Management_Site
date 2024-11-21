@@ -11,7 +11,7 @@
 	<body>
 
 		<header>
-			<?php require("components/header.php") ?>
+			<?php require("components/header.php"); ?>
 		</header>
 		
 		<main>
@@ -83,10 +83,7 @@
 		</main>
 
 		<footer>
-			<!-- need to fix the position with less height -->
-			<a href="https://www.linkedin.com/in/fmatiasmendes/" target="_blank">
-				&copy;2024 FILIPE MENDES. ALL RIGHTS RESERVED
-			</a>
+			<?php require("components/footer.php"); ?>
 		</footer>	
 			
 	</body>
