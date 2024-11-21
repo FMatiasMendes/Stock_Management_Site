@@ -33,29 +33,12 @@
 		<main>
 		<!-- consider make the ascending/descending order with arrows on each column -->
 			<div class="outer-border">
-				<h3 class="page-titles">PRODUCTS LIST</h3>				
-				<div class="column-selector">
-					<label for="">Column</label>
-					<select name="column" id="column">
-						<option value="id">ID</option>
-						<option value="name">NAME</option>
-						<option value="price">PRICE</option>
-						<option value="quantity">QUANTITY</option>
-					</select>
-				</div>
-				<div class="radio-inputs">
-					<div>
-						<label for="">Ascending</label>
-						<br>
-						<input type="radio" name="order" value="ascending" checked="checked">
-					</div>
-					<div>
-						<label for="">Descending</label>
-						<br>
-						<input type="radio" name="order" value="descending">
-					</div>
-				</div>
-				<input type="submit" name="" value="LIST" class="list-button">	
+				<h3 class="page-titles">SEARCH</h3>				
+				<form action="" class="search-form">
+					<input type="number" name="id" placeholder="ID">
+					<br>
+					<input type="submit" name="" value="SEARCH" class="list-button">
+				</form>					
 			
 				<table>
 					<tr>
@@ -69,31 +52,7 @@
 						<td>Green Pen</td>
 						<td>1.30 €</td>
 						<td>53</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Pink Pen</td>
-						<td>0.75 €</td>
-						<td>10</td>
-					</tr>
-					<tr>
-						<td>48</td>
-						<td>White wallet</td>
-						<td>6.50 €</td>
-						<td>12</td>
-					</tr>
-					<tr>
-						<td>49</td>
-						<td>Black wallet</td>
-						<td>8.99 €</td>
-						<td>15</td>
-					</tr>
-					<tr>
-						<td>50</td>
-						<td>Pencil Case</td>
-						<td>1.49 €</td>
-						<td>50</td>
-					</tr>
+					</tr>					
 				</table>
 			</div>
 		</main>
