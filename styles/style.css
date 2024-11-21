@@ -82,6 +82,12 @@ body{
 	margin-top: 30px;
 }
 
+.delete-message{
+	font-family: var(--font-family);
+	font-size: 16px;
+	margin-top: 20px;
+}
+
 .page-titles{
 	color: var(--text-color);
 	font-family: var(--font-family);
