@@ -33,13 +33,18 @@
 		<main>
 
 			<div class="outer-border">
+				<!-- php edition missing (name) -->
 				<p class="welcome-message">Welcome Filipe!</p>
+				<!-- php edition missing (date) -->
+				<p class="last-login-message">Last time you were here: dd/mm/yyyy at xx:xxH.</p>
 			</div>
 
 		</main>
 
 		<footer>
-			<p>&copy;<?php echo date("Y"); ?> FILIPE MENDES. ALL RIGHTS RESERVED </p>
+			<a href="https://www.linkedin.com/in/fmatiasmendes/" target="_blank">
+				&copy;2024 FILIPE MENDES. ALL RIGHTS RESERVED
+			</a>
 		</footer>	
 			
 	</body>

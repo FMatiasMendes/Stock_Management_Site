@@ -24,6 +24,7 @@ body{
 	border-radius: 20px;
 	margin: 20px 5% 40px 5%;
 	padding: 40px 20px;
+	text-align: center;
 }
 
 .main-title{
@@ -63,11 +64,21 @@ body{
 
 /* main */
 
-.welcome-message{
+.welcome-message,
+.last-login-message{
 	color: var(--text-color);
-	text-align: center;
 	text-transform: uppercase;
 	font-family: var(--font-family);
+}
+
+.welcome-message{
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.last-login-message{
+	font-size: 12px;
+	margin-top: 30px;
 }
 
 
@@ -82,17 +93,18 @@ body{
 
 footer{
 	font-family: var(--font-family);
-	display: block;
-	justify-items: center;
+	text-align: center;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 	margin: 10px;
+
 }
 
-footer p{
+footer a{
 	color: var(--text-color);
 	font-size: 12px;
+	text-decoration: none;
 }
 
 
