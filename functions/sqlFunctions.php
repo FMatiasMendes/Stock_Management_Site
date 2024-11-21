@@ -4,8 +4,7 @@ $mysqlHost = "localhost";
 $dbname = "stock_management";
 
 //connection to SQL
-$pdo = new PDO("
-	mysql:host=$mysqlHost;dbname=$dbname;charset=utf8mb4;", "root", "");
+$pdo = new PDO("mysql:host=$mysqlHost;dbname=$dbname;charset=utf8mb4;", "root", "");
 
 //Search
 function selectSQL($a){ 

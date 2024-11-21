@@ -1,5 +1,11 @@
 <?php
+
+	require("functions/productsFunctions.php");
+
 	$page = "PRODUCTS LIST";
+
+	$listProducts = listProducts();
+
 ?>
 
 <!DOCTYPE html>
@@ -52,36 +58,16 @@
 						<th>PRICE</th>
 						<th>QUANTITY</th>
 					</tr>
-					<tr>
-						<td>1</td>
-						<td>Green Pen</td>
-						<td>1.30 €</td>
-						<td>53</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Pink Pen</td>
-						<td>0.75 €</td>
-						<td>10</td>
-					</tr>
-					<tr>
-						<td>48</td>
-						<td>White wallet</td>
-						<td>6.50 €</td>
-						<td>12</td>
-					</tr>
-					<tr>
-						<td>49</td>
-						<td>Black wallet</td>
-						<td>8.99 €</td>
-						<td>15</td>
-					</tr>
-					<tr>
-						<td>50</td>
-						<td>Pencil Case</td>
-						<td>1.49 €</td>
-						<td>50</td>
-					</tr>
+
+					<?php foreach ($listProducts as $i => $l): ?>
+						<tr>
+							<td><?= $l["id"]; ?></td>
+							<td><?= $l["name"]; ?></td>
+							<td><?= number_format($l["price"], 2); ?> €</td>
+							<td><?= $l["quantity"]; ?></td>
+						</tr>
+					<?php endforeach; ?>
+
 				</table>
 			</div>
 		</main>
