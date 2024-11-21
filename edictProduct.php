@@ -31,68 +31,88 @@
 		</header>
 		
 		<main>
-		<!-- consider make the ascending/descending order with arrows on each column -->
+
+		<div class="outer-border">
+			<!-- change id number -->
+			<h3 class="page-titles">EDICT PRODUCT (48)</h3>
+			<div>
+				<form action="" class="search-form">
+					<!-- change placeholders number -->
+					<input type="text" name="name" placeholder="Green Pen"><br><br>					
+					<input type="number" name="price" placeholder="1.68 €"><br><br>
+					<input type="number" name="quantity" placeholder="153"><br><br>
+					<input type="submit" name="" value="SAVE" class="save-button">
+					<button class="cancel-button">CANCEL</button>
+				</form>
+			</div>				
+
+		</div>
+
 			<div class="outer-border">
-				<h3 class="page-titles">PRODUCTS LIST</h3>				
-				<div class="column-selector">
-					<label for="">Column</label>
-					<select name="column" id="column">
-						<option value="id">ID</option>
-						<option value="name">NAME</option>
-						<option value="price">PRICE</option>
-						<option value="quantity">QUANTITY</option>
-					</select>
-				</div>
-				<div class="radio-inputs">
-					<div>
-						<label for="">Ascending</label>
-						<br>
-						<input type="radio" name="order" value="ascending" checked="checked">
-					</div>
-					<div>
-						<label for="">Descending</label>
-						<br>
-						<input type="radio" name="order" value="descending">
-					</div>
-				</div>
-				<input type="submit" name="" value="LIST" class="list-button">	
-			
+				<h3 class="page-titles">EDICT PRODUCT</h3>				
+							
 				<table>
 					<tr>
 						<th>ID</th>
 						<th class="name-column">NAME</th>
 						<th>PRICE</th>
 						<th>QUANTITY</th>
+						<th>ACTION</th>
 					</tr>
 					<tr>
 						<td>1</td>
 						<td>Green Pen</td>
 						<td>1.30 €</td>
 						<td>53</td>
+						<td>
+							<form action="">
+								<input type="submit" name="edict" value="EDICT" class="edict-button">
+							</form>							
+						</td>
 					</tr>
 					<tr>
 						<td>2</td>
 						<td>Pink Pen</td>
 						<td>0.75 €</td>
 						<td>10</td>
+						<td>
+							<form action="">
+								<input type="submit" name="edict" value="EDICT" class="edict-button">
+							</form>							
+						</td>
 					</tr>
 					<tr>
 						<td>48</td>
 						<td>White wallet</td>
 						<td>6.50 €</td>
 						<td>12</td>
+						<td>
+							<form action="">
+								<input type="submit" name="edict" value="EDICT" class="edict-button">
+							</form>							
+						</td>
 					</tr>
 					<tr>
 						<td>49</td>
 						<td>Black wallet</td>
 						<td>8.99 €</td>
 						<td>15</td>
+						<td>
+							<form action="">
+								<input type="submit" name="edict" value="EDICT" class="edict-button">
+							</form>							
+						</td>
 					</tr>
 					<tr>
 						<td>50</td>
 						<td>Pencil Case</td>
 						<td>1.49 €</td>
 						<td>50</td>
+						<td>
+							<form action="">
+								<input type="submit" name="edict" value="EDICT" class="edict-button">
+							</form>							
+						</td>
 					</tr>
 				</table>
 			</div>
