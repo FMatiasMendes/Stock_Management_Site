@@ -154,12 +154,20 @@ tr:nth-child(even){
 	margin-top: 15px;
 }
 
-.search-form input[type="number"]{
+.search-form input[type="number"],
+.search-form input[type="text"]{
 	text-align: center;
 	border: 2px solid grey;
 	border-radius: 5px;
 	width: 175px;
 	height: 20px;
+}
+
+.product-registered-message{
+	font-family: var(--font-family);
+	color: var(--text-color);
+	text-align: center;
+	margin-top: 40px;
 }
 
 

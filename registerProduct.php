@@ -33,28 +33,20 @@
 		<main>
 		<!-- consider make the ascending/descending order with arrows on each column -->
 			<div class="outer-border">
-				<h3 class="page-titles">SEARCH</h3>				
+				<h3 class="page-titles">REGISTER NEW PRODUCT</h3>				
 				<form action="" class="search-form">
-					<input type="number" name="id" placeholder="ID">
-					<br>
-					<input type="submit" name="" value="SEARCH" class="list-button">
-				</form>					
-			
-				<table>
-					<tr>
-						<th>ID</th>
-						<th class="name-column">NAME</th>
-						<th>PRICE</th>
-						<th>QUANTITY</th>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Green Pen</td>
-						<td>1.30 €</td>
-						<td>53</td>
-					</tr>					
-				</table>
+					<input type="text" name="name" placeholder="Name"><br><br>					
+					<input type="number" name="price" placeholder="Price (€)"><br><br>
+					<input type="number" name="quantity" placeholder="Quantity"><br><br>
+					<input type="submit" name="" value="REGIST" class="list-button">
+				</form>
+				<div>
+					<p class="product-registered-message">
+						Green Pen (ID: 32) registered with sucess!
+					</p>
+				</div>
 			</div>
+
 		</main>
 
 		<footer>
