@@ -16,7 +16,7 @@ body{
 	height: 100%; /* change height to view height?! */
 }
 
-/* header */
+/* ---- header ---- */
 
 .outer-border{
 	border: 3px solid;
@@ -64,11 +64,13 @@ body{
 }
 
 .link-active{
-	color: cyan !important;
+	text-decoration: underline !important;
+	text-decoration-color: cyan !important;
+	text-decoration-thickness: 2px !important;
+	text-underline-offset: 8px !important;
 }
 
-/* main */
-
+/* ---- main ---- */
 .welcome-message,
 .last-login-message{
 	color: var(--text-color);
@@ -217,16 +219,7 @@ tr:hover{
 }
 
 
-
-
-
-
-
-
-
-
-
-/* footer */
+/* ---- footer ---- */
 
 footer{
 	font-family: var(--font-family);
