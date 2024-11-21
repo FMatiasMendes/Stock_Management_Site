@@ -34,21 +34,22 @@
 
 		<div class="outer-border">
 			<!-- change id number -->
-			<h3 class="page-titles">DELETE PRODUCT (48)</h3>
-			<p class="delete-message">Are you shure you want to delete Green Pen (1)?</p>
+			<h3 class="page-titles">REGISTER SALES (48)</h3>
+			
 			<div>
 				<form action="" class="search-form">
 					<!-- change placeholders number -->
+					<input type="number" name="" value="" placeholder="Quantity sold"><br>
 
-					<input type="submit" name="" value="YES" class="save-button">
-					<button class="cancel-button">NO</button>
+					<input type="submit" name="" value="REGISTER" class="save-button">
+					<button class="cancel-button">CANCEL</button>
 				</form>
 			</div>				
 
 		</div>
 
 			<div class="outer-border">
-				<h3 class="page-titles">DELETE PRODUCT</h3>				
+				<h3 class="page-titles">REGISTER SALES</h3>				
 							
 				<table>
 					<tr>
@@ -65,7 +66,7 @@
 						<td>53</td>
 						<td>
 							<form action="">
-								<input type="submit" name="edict" value="DELETE" class="edict-button">
+								<input type="submit" name="edict" value="SALE" class="edict-button">
 							</form>							
 						</td>
 					</tr>
@@ -76,7 +77,7 @@
 						<td>10</td>
 						<td>
 							<form action="">
-							<input type="submit" name="edict" value="DELETE" class="edict-button">
+							<input type="submit" name="edict" value="SALE" class="edict-button">
 							</form>							
 						</td>
 					</tr>
@@ -87,7 +88,7 @@
 						<td>12</td>
 						<td>
 							<form action="">
-							<input type="submit" name="edict" value="DELETE" class="edict-button">
+							<input type="submit" name="edict" value="SALE" class="edict-button">
 							</form>							
 						</td>
 					</tr>
@@ -98,7 +99,7 @@
 						<td>15</td>
 						<td>
 							<form action="">
-							<input type="submit" name="edict" value="DELETE" class="edict-button">
+							<input type="submit" name="edict" value="SALE" class="edict-button">
 							</form>							
 						</td>
 					</tr>
@@ -109,7 +110,7 @@
 						<td>50</td>
 						<td>
 							<form action="">
-							<input type="submit" name="edict" value="DELETE" class="edict-button">
+							<input type="submit" name="edict" value="SALE" class="edict-button">
 							</form>							
 						</td>
 					</tr>

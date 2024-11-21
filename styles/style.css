@@ -114,7 +114,7 @@ body{
 .cancel-button
 {
 	color: var(--text-color);
-	width: 80px;
+	width: 90px;
 	padding: 3px 0px;
 	border: 1px solid;
 	border-color: var(--text-color);
