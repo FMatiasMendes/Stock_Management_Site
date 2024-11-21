@@ -1,3 +1,7 @@
+<?php
+	$page = "REGISTER SALES";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>

@@ -1,3 +1,7 @@
+<?php
+	$page = `DELETE PRODUCT`;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>

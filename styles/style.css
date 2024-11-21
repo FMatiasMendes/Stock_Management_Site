@@ -63,6 +63,10 @@ body{
 	color: cyan;
 }
 
+.link-active{
+	color: cyan !important;
+}
+
 /* main */
 
 .welcome-message,

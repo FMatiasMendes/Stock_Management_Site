@@ -1,3 +1,7 @@
+<?php
+	$page = "CODE SEARCH";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>

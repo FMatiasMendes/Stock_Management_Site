@@ -1,3 +1,7 @@
+<?php
+	$page = "EDICT PRODUCT";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>

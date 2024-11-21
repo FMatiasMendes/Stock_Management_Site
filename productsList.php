@@ -1,3 +1,7 @@
+<?php
+	$page = "PRODUCTS LIST";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>

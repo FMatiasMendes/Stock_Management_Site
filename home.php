@@ -1,3 +1,7 @@
+<?php
+	$page = "HOME";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
