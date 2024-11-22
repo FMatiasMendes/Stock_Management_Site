@@ -1,5 +1,5 @@
 <?php
-	$page = "REGISTER SALES";
+	$page = "TRANSACTION REGISTER";
 ?>
 
 <!DOCTYPE html>

@@ -56,15 +56,13 @@
 			<!-- change id number -->
 			<h3 class="page-titles">DELETE PRODUCT</h3>
 			<p class="delete-message">Are you shure you want to delete 
-				<b></b><?= $product['name'] ?? ''; ?> (ID <?= $product['id'] ?? ''; ?>)</b>?
+				<b><?= $product['name'] ?? ''; ?> (ID <?= $product['id'] ?? ''; ?>)</b>?
 			</p>
 
 			<!-- correct this condition -->
 			<!-- <?php if ($product === null): ?> -->
 				<!-- <p class='error-message'>Product not found.</p> -->
-    	<!-- <?php endif; ?> -->
-
-			
+    	<!-- <?php endif; ?> -->			
 
 			<div>
 				<form action="deleteProduct.php" class="search-form" method="get">
