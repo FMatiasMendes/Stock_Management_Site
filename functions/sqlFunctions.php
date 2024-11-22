@@ -14,8 +14,8 @@ function selectSQL($a){
 	return $result;
 }
 
-//Unique search
-function selectSQLUnique($a){
+//Specific search
+function selectSpecificSQL($a){
 	global $pdo;
 	$consult = $pdo->query($a);
 	$result = $consult->fetch(PDO::FETCH_ASSOC);
