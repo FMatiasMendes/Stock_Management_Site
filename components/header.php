@@ -20,7 +20,7 @@
 			<li><a href="deleteProduct.php" class="<?= ($page == `DELETE PRODUCT`) ? "link-active" : ""; ?>">
 				DELETE PRODUCT
 			</a></li>
-			<li><a href="registerSales.php" class="<?= ($page == "TRANSACTION REGISTER") ? "link-active" : ""; ?>">
+			<li><a href="transactionRegister.php" class="<?= ($page == "TRANSACTION REGISTER") ? "link-active" : ""; ?>">
 				TRANSACTION REGISTER
 			</a></li>
 			<li><a href="index.php">

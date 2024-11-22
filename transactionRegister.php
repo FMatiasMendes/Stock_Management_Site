@@ -1,5 +1,49 @@
 <?php
+
+	require_once("functions/productsFunctions.php");
+
 	$page = "TRANSACTION REGISTER";
+
+	$listProducts = listProducts();
+	$product = null;
+	$id = null;
+
+	$form = isset($_GET["id"]) && isset($_GET["action"]);
+
+	if($form){
+		$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+		$action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+
+		if($id !== FALSE){
+			$product = getProductById($id);
+		}
+	}
+
+	$form2 = isset($_GET["quantity"]) && isset($_GET["option"]) && isset($_GET["action"]);
+
+	if($form2){
+		$quantity = filter_input(INPUT_GET, 'quantity', FILTER_VALIDATE_INT);
+		$option = filter_input(INPUT_GET, 'option', FILTER_SANITIZE_STRING);
+		$action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+
+		if($quantity !== FALSE && $option !== FALSE && $action !== FALSE){
+			if($option === 'register'){
+				if($action == 'buy'){
+				$initialQuantity = $product['quantity'];
+				$updatedQuantity = $initialQuantity + $quantity;			
+				}
+				elseif($action == 'sell'){
+					$initialQuantity = $product['quantity'];
+					$updatedQuantity = $initialQuantity - $quantity;					
+				}
+				updateProductQuantity($updatedQuantity, $id);
+				$listProducts = listProducts();
+			}			
+		}
+		header("Location: transactionRegister.php");
+		exit();
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -26,11 +70,12 @@
 			
 			<div>
 				<form action="" class="search-form">
-					<!-- change placeholders number -->
-					<input type="number" name="" value="" placeholder="Quantity sold"><br>
-
-					<input type="submit" name="" value="REGISTER" class="save-button">
-					<button class="cancel-button">CANCEL</button>
+					<!-- alternate placeholder text "sold/bought" -->
+					<input type="hidden" name="id" value="<?= $product["id"]; ?>">
+					<input type="hidden" name="action" value="<?= $action; ?>">
+					<input type="number" name="quantity" placeholder="Quantity" min="0" max="999999" step="1"><br>
+					<button type="submit" name="option" value="register" class="save-button">REGISTER</button>
+					<button type="submit" name="option" value="cancel" class="cancel-button">CANCEL</button>
 				</form>
 			</div>				
 
@@ -47,61 +92,28 @@
 						<th>QUANTITY</th>
 						<th>ACTION</th>
 					</tr>
-					<tr>
-						<td>1</td>
-						<td>Green Pen</td>
-						<td>1.30 €</td>
-						<td>53</td>
-						<td>
-							<form action="">
-								<input type="submit" name="edict" value="SALE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Pink Pen</td>
-						<td>0.75 €</td>
-						<td>10</td>
-						<td>
-							<form action="">
-							<input type="submit" name="edict" value="SALE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
-					<tr>
-						<td>48</td>
-						<td>White wallet</td>
-						<td>6.50 €</td>
-						<td>12</td>
-						<td>
-							<form action="">
-							<input type="submit" name="edict" value="SALE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
-					<tr>
-						<td>49</td>
-						<td>Black wallet</td>
-						<td>8.99 €</td>
-						<td>15</td>
-						<td>
-							<form action="">
-							<input type="submit" name="edict" value="SALE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
-					<tr>
-						<td>50</td>
-						<td>Pencil Case</td>
-						<td>1.49 €</td>
-						<td>50</td>
-						<td>
-							<form action="">
-							<input type="submit" name="edict" value="SALE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
+
+					<?php foreach($listProducts as $i => $l): ?>
+						<tr>
+							<td><?= htmlspecialchars($l["id"]); ?></td>
+							<td><?= htmlspecialchars($l["name"]); ?></td>
+							<td><?= number_format($l["price"], 2); ?> €</td>
+							<td><?= htmlspecialchars($l["quantity"]); ?></td>							
+							<td>
+								<div id="action-buttons">
+									<form action="">
+										<input type="hidden" name="action" value="buy">
+										<button type="submit" name="id" value="<?= htmlspecialchars($l["id"]); ?>" class="edict-button">BUY</button>
+									</form>
+									<form action="">
+										<input type="hidden" name="action" value="sell">
+										<button type="submit" name="id" value="<?= htmlspecialchars($l["id"]); ?>" class="edict-button">SELL</button>
+									</form>									
+								</div>						
+							</td>
+						</tr>
+					<?php endforeach; ?>
+					
 				</table>
 			</div>
 		</main>

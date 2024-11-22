@@ -30,6 +30,11 @@ function edictProduct($name, $price, $quantity, $id){
   iduSQL("UPDATE products SET name='$name', price='$price', quantity='$quantity' WHERE id='$id'");
 }
 
+//to update quantity
+function updateProductQuantity($quantity, $id){
+  iduSQL("UPDATE products SET quantity='$quantity' WHERE id='$id'");
+}
+
 //to delete a product
 function deleteProduct($id){
   iduSQL("DELETE FROM products WHERE id='$id'");
