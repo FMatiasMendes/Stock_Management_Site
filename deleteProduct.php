@@ -1,5 +1,37 @@
 <?php
-	$page = `DELETE PRODUCT`;
+
+	require_once("functions/productsFunctions.php");
+
+	$page = 'DELETE PRODUCT';
+	$listProducts = listProducts();
+	$id = null;
+	$product = null;
+
+	if(isset($_GET["id"])){
+		$id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT);
+
+		if($id !== FALSE){
+			$product = getProductById($id);
+		}		
+	}
+
+	$form = isset($_GET['option']);
+
+	if($form){
+		$option = filter_input(INPUT_GET, "option", FILTER_SANITIZE_STRING);
+
+		if ($option == 'YES'){
+			deleteProduct($id);
+			$listProducts = listProducts();
+			header("Location: deleteProduct.php");
+			exit();
+		}
+		elseif($option == 'NO'){
+			header("Location: deleteProduct.php");
+			exit();
+		}
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -22,14 +54,23 @@
 
 		<div class="outer-border">
 			<!-- change id number -->
-			<h3 class="page-titles">DELETE PRODUCT (48)</h3>
-			<p class="delete-message">Are you shure you want to delete Green Pen (1)?</p>
-			<div>
-				<form action="" class="search-form">
-					<!-- change placeholders number -->
+			<h3 class="page-titles">DELETE PRODUCT</h3>
+			<p class="delete-message">Are you shure you want to delete 
+				<b></b><?= $product['name'] ?? ''; ?> (ID <?= $product['id'] ?? ''; ?>)</b>?
+			</p>
 
-					<input type="submit" name="" value="YES" class="save-button">
-					<button class="cancel-button">NO</button>
+			<!-- correct this condition -->
+			<!-- <?php if ($product === null): ?> -->
+				<!-- <p class='error-message'>Product not found.</p> -->
+    	<!-- <?php endif; ?> -->
+
+			
+
+			<div>
+				<form action="deleteProduct.php" class="search-form" method="get">
+					<input type="hidden" name="id" value="<?= $product['id'] ?? ''; ?>">
+					<input type="submit" name="option" value="YES" class="save-button">
+					<input type="submit" name="option" value="NO" class="cancel-button">
 				</form>
 			</div>				
 
@@ -46,61 +87,21 @@
 						<th>QUANTITY</th>
 						<th>ACTION</th>
 					</tr>
-					<tr>
-						<td>1</td>
-						<td>Green Pen</td>
-						<td>1.30 €</td>
-						<td>53</td>
-						<td>
-							<form action="">
-								<input type="submit" name="edict" value="DELETE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Pink Pen</td>
-						<td>0.75 €</td>
-						<td>10</td>
-						<td>
-							<form action="">
-							<input type="submit" name="edict" value="DELETE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
-					<tr>
-						<td>48</td>
-						<td>White wallet</td>
-						<td>6.50 €</td>
-						<td>12</td>
-						<td>
-							<form action="">
-							<input type="submit" name="edict" value="DELETE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
-					<tr>
-						<td>49</td>
-						<td>Black wallet</td>
-						<td>8.99 €</td>
-						<td>15</td>
-						<td>
-							<form action="">
-							<input type="submit" name="edict" value="DELETE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
-					<tr>
-						<td>50</td>
-						<td>Pencil Case</td>
-						<td>1.49 €</td>
-						<td>50</td>
-						<td>
-							<form action="">
-							<input type="submit" name="edict" value="DELETE" class="edict-button">
-							</form>							
-						</td>
-					</tr>
+					
+					<?php foreach($listProducts as $i => $l): ?>
+						<tr>
+							<td><?= htmlspecialchars($l['id']); ?></td>
+							<td><?= htmlspecialchars($l['name']); ?></td>
+							<td><?= number_format($l['price'], 2); ?></td>
+							<td><?= htmlspecialchars($l['quantity']); ?></td>
+							<td>
+								<form action="deleteProduct.php" method="get">
+									<button type="submit" name="id" value="<?= $l['id']; ?>" class="edict-button">DELETE</button>
+								</form>							
+							</td>
+						</tr>
+					<?php endforeach; ?>
+					
 				</table>
 			</div>
 		</main>
