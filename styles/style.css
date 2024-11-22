@@ -137,6 +137,11 @@ body{
 	background-color: rgba(0, 255, 255, 0.25);
 }
 
+.cancel-button{
+	text-decoration: none;
+	padding: 3px 16px;
+}
+
 .save-button{
 	margin-right: 20px;
 }
