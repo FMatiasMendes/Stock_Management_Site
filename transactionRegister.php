@@ -75,22 +75,23 @@
 		
 		<main>
 
-		<div class="outer-border">
-			<!-- change id number -->
-			<h3 class="page-titles">REGISTER SALES (48)</h3>
-			
-			<div>
-				<form action="" class="search-form">
-					<!-- alternate placeholder text "sold/bought" -->
-					<input type="hidden" name="id" value="<?= $product["id"]; ?>">
-					<input type="hidden" name="action" value="<?= $action; ?>">
-					<input type="number" name="quantity" placeholder="Quantity" min="0" max="999999" step="1"><br>
-					<button type="submit" name="option" value="register" class="save-button">REGISTER</button>
-					<button type="submit" name="option" value="cancel" class="cancel-button">CANCEL</button>
-				</form>
-			</div>				
-
-		</div>
+			<?php if($form2): ?>
+				<div class="outer-border">
+					<h4 class="page-titles">
+						How many "<?= $product["name"]; ?>" (ID: <?= $product["id"]; ?>) were
+						<?= ($action == 'buy')? "bought": "sold" ; ?>?
+					</h4>					
+					<div>
+						<form action="transactionRegister.php" class="search-form form-top-margin" method="get">
+							<input type="hidden" name="id" value="<?= $product["id"]; ?>">
+							<input type="hidden" name="action" value="<?= $action; ?>">
+							<input type="number" name="quantity" placeholder="Quantity" min="0" max="999999" step="1"><br>
+							<button type="submit" name="option" value="register" class="save-button">REGISTER</button>
+							<button type="submit" name="option" value="cancel" class="cancel-button">CANCEL</button>
+						</form>
+					</div>
+				</div>
+			<?php endif; ?>
 
 			<div class="outer-border">
 				<div class="main-title-div">

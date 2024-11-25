@@ -64,27 +64,25 @@
 		</header>
 		
 		<main>
+			<?php if($form2): ?>
+				<div class="outer-border">
+					<p class="delete-message">Are you shure you want to delete 
+						<b><?= $product['name'] ?? ''; ?> (ID <?= $product['id'] ?? ''; ?>)</b>?
+					</p>
+					<!-- correct this condition -->
+					<!-- <?php if ($product === null): ?> -->
+						<!-- <p class='error-message'>Product not found.</p> -->
+					<!-- <?php endif; ?> -->			
 
-		<div class="outer-border">
-			<!-- change id number -->
-			<p class="delete-message">Are you shure you want to delete 
-				<b><?= $product['name'] ?? ''; ?> (ID <?= $product['id'] ?? ''; ?>)</b>?
-			</p>
-
-			<!-- correct this condition -->
-			<!-- <?php if ($product === null): ?> -->
-				<!-- <p class='error-message'>Product not found.</p> -->
-    	<!-- <?php endif; ?> -->			
-
-			<div>
-				<form action="deleteProduct.php" class="search-form" method="get">
-					<input type="hidden" name="id" value="<?= $product['id'] ?? ''; ?>">
-					<input type="submit" name="option" value="YES" class="save-button">
-					<input type="submit" name="option" value="NO" class="cancel-button">
-				</form>
-			</div>				
-
-		</div>
+					<div>
+						<form action="deleteProduct.php" class="search-form" method="get">
+							<input type="hidden" name="id" value="<?= $product['id'] ?? ''; ?>">
+							<input type="submit" name="option" value="YES" class="save-button">
+							<input type="submit" name="option" value="NO" class="cancel-button">
+						</form>
+					</div>
+				</div>
+			<?php endif; ?>
 
 			<div class="outer-border">
 				<div class="main-title-div">
