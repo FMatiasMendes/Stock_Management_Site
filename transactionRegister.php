@@ -26,6 +26,10 @@
 
 		if($id !== FALSE){
 			$product = getProductById($id);
+			if (empty($product["id"])){
+				header("Location: error404.php");
+      			exit();
+			}
 		}
 	}
 
