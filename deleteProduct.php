@@ -7,7 +7,19 @@
 	$id = null;
 	$product = null;
 
-	if(isset($_GET["id"])){
+	$form1 = isset($_GET["search"]);
+
+	if ($form1){
+		$search = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
+		$listProducts = searchProduct($search);
+	}
+	else{
+		$listProducts = listProducts();
+	}
+
+	$form2 = isset($_GET["id"]);
+
+	if($form2){
 		$id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT);
 
 		if($id !== FALSE){
@@ -15,9 +27,9 @@
 		}		
 	}
 
-	$form = isset($_GET['option']);
+	$form3 = isset($_GET['option']);
 
-	if($form){
+	if($form3){
 		$option = filter_input(INPUT_GET, "option", FILTER_SANITIZE_STRING);
 
 		if ($option == 'YES'){
@@ -54,7 +66,6 @@
 
 		<div class="outer-border">
 			<!-- change id number -->
-			<h3 class="page-titles">DELETE PRODUCT</h3>
 			<p class="delete-message">Are you shure you want to delete 
 				<b><?= $product['name'] ?? ''; ?> (ID <?= $product['id'] ?? ''; ?>)</b>?
 			</p>
@@ -75,7 +86,17 @@
 		</div>
 
 			<div class="outer-border">
-				<h3 class="page-titles">DELETE PRODUCT</h3>				
+				<div class="main-title-div">
+					<div class="list-div">
+						<h3 class="page-titles">DELETE PRODUCT</h3>
+					</div>
+					<div class="search-div">			
+						<form action="deleteProduct.php" class="search-form" method="get">
+							<input type="text" name="search" placeholder="id/name" autofocus>
+							<button type="submit" name="button" class="list-button search-button">SEARCH</button>
+						</form>
+					</div>
+				</div>
 							
 				<table>
 					<tr>
