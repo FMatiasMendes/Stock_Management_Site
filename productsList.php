@@ -63,7 +63,7 @@
 						
 						<div class="search-div">			
 							<form action="productsList.php" class="search-form" method="get">
-								<input type="text" name="search" placeholder="SEARCH">
+								<input type="text" name="search" placeholder="id/name" autofocus>
 								<button type="submit" name="button" class="list-button search-button">SEARCH</button>
 							</form>
 						</div>
