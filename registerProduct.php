@@ -38,11 +38,11 @@
 		<!-- consider make the ascending/descending order with arrows on each column -->
 			<div class="outer-border">
 				<h3 class="page-titles">REGISTER NEW PRODUCT</h3>				
-				<form action="registerProduct.php" class="search-form" method="get">
+				<form action="registerProduct.php" class="search-form form-top-margin" method="get">
 					<input type="text" name="name" placeholder="Name" required autofocus><br><br>					
 					<input type="number" name="price" placeholder="Price (€)" min="0" max="999999" step="0.01" required><br><br>
 					<input type="number" name="quantity" placeholder="Quantity" min="0" max="999999" step="1" required><br><br>
-					<input type="submit" value="REGIST" class="list-button">
+					<input type="submit" value="SAVE" class="list-button">
 				</form>
 				<div>	
 					<?php if($form): ?>		

@@ -67,7 +67,7 @@
 			<h3 class="page-titles">EDICT PRODUCT (<?= htmlspecialchars($product["id"] ?? ''); ?>)</h3>
 			<div class="main-title-div">
 				<div class="list-div">
-					<form action="edictProduct.php" class="search-form" method="get">
+					<form action="edictProduct.php" class="search-form form-top-margin" method="get">
 						<input type="hidden" name="id" value="<?= $product['id'] ?? ''; ?>">
 						<input type="text" name="name" placeholder="Name" value="<?= $product["name"] ?? ''; ?>" required autofocus><br><br>					
 						<input type="number" name="price" placeholder="Price (€)" value="<?= $product["price"] ?? ''; ?>" min="0" max="999999" step="0.01" required><br><br>
@@ -77,7 +77,7 @@
 					</form>
 
 					<div class="search-div">			
-						<form action="edictProduct.php" class="search-form" method="get">
+						<form action="edictProduct.php" class="search-form form-top-margin" method="get">
 							<input type="text" name="search" placeholder="id/name">
 							<button type="submit" name="button" class="list-button search-button">SEARCH</button>
 						</form>

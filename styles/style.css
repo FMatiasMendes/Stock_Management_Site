@@ -227,6 +227,10 @@ tr:nth-child(even){
 	height: 20px;
 }
 
+.form-top-margin{
+	margin-top: 30px;
+}
+
 .product-registered-message{
 	font-family: var(--font-family);
 	color: var(--text-color);

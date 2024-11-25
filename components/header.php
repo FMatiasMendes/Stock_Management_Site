@@ -8,9 +8,6 @@
 			<li><a href="productsList.php" class="<?= ($page == "PRODUCTS LIST") ? "link-active" : ""; ?>">
 				PRODUCTS LIST
 			</a></li>
-			<li><a href="codeSearch.php" class="<?= ($page == "CODE SEARCH") ? "link-active" : ""; ?>">
-				CODE SEARCH
-			</a></li>
 			<li><a href="registerProduct.php" class="<?= ($page == "REGISTER PRODUCT") ? "link-active" : ""; ?>">
 				REGISTER PRODUCT
 			</a></li>
