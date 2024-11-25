@@ -56,7 +56,7 @@
 						<div class="search-div">			
 							<form action="" class="search-form">
 								<input type="number" name="id" placeholder="ID SEARCH">
-								<input type="submit" name="" value="SEARCH" class="list-button search-button">
+								<button type="submit" name="" value="" class="list-button search-button">SEARCH</button>
 							</form>
 						</div>
 					</div>

@@ -171,6 +171,7 @@ body{
 
 .search-button{
 	margin-left: 10px;
+	margin-top: 0;
 }
 
 #action-buttons{
@@ -215,7 +216,6 @@ tr:nth-child(even){
 .search-form{
 	font-family: var(--font-family);
 	text-align: center;
-	margin-top: 15px;
 }
 
 .search-form input[type="number"],
