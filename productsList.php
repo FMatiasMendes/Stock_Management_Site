@@ -27,29 +27,40 @@
 		<main>
 		<!-- consider make the ascending/descending order with arrows on each column -->
 			<div class="outer-border">
-				<h3 class="page-titles">PRODUCTS LIST</h3>				
-				<div class="column-selector">
-					<label for="">Column</label>
-					<select name="column" id="column">
-						<option value="id">ID</option>
-						<option value="name">NAME</option>
-						<option value="price">PRICE</option>
-						<option value="quantity">QUANTITY</option>
-					</select>
-				</div>
-				<div class="radio-inputs">
-					<div>
-						<label for="">Ascending</label>
-						<br>
-						<input type="radio" name="order" value="ascending" checked="checked">
+				<div class="main-title-div">
+					<div class="list-div">
+						<h3 class="page-titles">PRODUCTS LIST</h3>				
+						<div class="column-selector">
+							<label for="">Column</label>
+							<select name="column" id="column">
+								<option value="id">ID</option>
+								<option value="name">NAME</option>
+								<option value="price">PRICE</option>
+								<option value="quantity">QUANTITY</option>
+							</select>
+						</div>
+						<div class="radio-inputs">
+							<div>
+								<label for="">Ascending</label>
+								<br>
+								<input type="radio" name="order" value="ascending" checked="checked">
+							</div>
+							<div>
+								<label for="">Descending</label>
+								<br>
+								<input type="radio" name="order" value="descending">
+							</div>
+						</div>
+						<input type="submit" name="" value="LIST" class="list-button">
+						
+						<div class="search-div">			
+							<form action="" class="search-form">
+								<input type="number" name="id" placeholder="ID SEARCH">
+								<input type="submit" name="" value="SEARCH" class="list-button search-button">
+							</form>
+						</div>
 					</div>
-					<div>
-						<label for="">Descending</label>
-						<br>
-						<input type="radio" name="order" value="descending">
-					</div>
 				</div>
-				<input type="submit" name="" value="LIST" class="list-button">	
 			
 				<table>
 					<tr>
