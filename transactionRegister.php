@@ -8,9 +8,19 @@
 	$product = null;
 	$id = null;
 
-	$form = isset($_GET["id"]) && isset($_GET["action"]);
+	$form1 = isset($_GET["search"]);
 
-	if($form){
+	if ($form1){
+		$search = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
+		$listProducts = searchProduct($search);
+	}
+	else{
+		$listProducts = listProducts();
+	}
+
+	$form2 = isset($_GET["id"]) && isset($_GET["action"]);
+
+	if($form2){
 		$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 		$action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
@@ -19,9 +29,9 @@
 		}
 	}
 
-	$form2 = isset($_GET["quantity"]) && isset($_GET["option"]) && isset($_GET["action"]);
+	$form3 = isset($_GET["quantity"]) && isset($_GET["option"]) && isset($_GET["action"]);
 
-	if($form2){
+	if($form3){
 		$quantity = filter_input(INPUT_GET, 'quantity', FILTER_VALIDATE_INT);
 		$option = filter_input(INPUT_GET, 'option', FILTER_SANITIZE_STRING);
 		$action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
@@ -82,7 +92,17 @@
 		</div>
 
 			<div class="outer-border">
-				<h3 class="page-titles">REGISTER SALES</h3>				
+				<div class="main-title-div">
+					<div class="list-div">
+						<h3 class="page-titles">REGISTER SALES</h3>
+					</div>
+					<div class="search-div">			
+						<form action="transactionRegister.php" class="search-form" method="get">
+							<input type="text" name="search" placeholder="id/name" autofocus>
+							<button type="submit" name="button" class="list-button search-button">SEARCH</button>
+						</form>
+					</div>
+				</div>
 							
 				<table>
 					<tr>
