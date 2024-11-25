@@ -24,6 +24,7 @@
 		<title>Stock Management</title>
 		<link rel="shortcut icon" href="images/background.jpg" type="image/x-icon">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 		<link rel="stylesheet" href="styles/style.css">
 	</head>
 
@@ -78,7 +79,17 @@
 						<th>ID</th>
 						<th class="name-column">NAME</th>
 						<th>PRICE</th>
-						<th>QUANTITY</th>
+						<th class="th-div">
+							QUANTITY
+							<div class="arrows-div">
+								<div class="asc-arrow">
+									<button class="arrow-button">&#11205;</button>
+								</div>
+								<div class="desc-arrow">
+									<button class="arrow-button">&#11206;</button>
+								</div>
+							</div>
+						</th>						
 					</tr>
 
 					<?php foreach ($listProducts as $i => $l): ?>
@@ -100,3 +111,6 @@
 			
 	</body>
 </html>
+
+<th>&#11205;</th>
+<th>&#x2BC5;</th>
