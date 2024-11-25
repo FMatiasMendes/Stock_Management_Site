@@ -129,8 +129,6 @@
 		<footer>
 			<?php require("components/footer.php"); ?>
 		</footer>
-
-		<!-- <script src="scripts/scripts.js"></script> -->
 			
 	</body>
 </html>
