@@ -63,6 +63,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Stock Management</title>
 		<link rel="shortcut icon" href="images/background.jpg" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="styles/style.css">
 	</head>
 
@@ -99,7 +100,9 @@
 					<div class="search-div">			
 						<form action="transactionRegister.php" class="search-form" method="get">
 							<input type="text" name="search" placeholder="id/name" autofocus>
-							<button type="submit" name="button" class="list-button search-button">SEARCH</button>
+							<button type="submit" name="button" class="list-button search-button">
+								<i class="fa fa-search"></i>
+							</button>
 						</form>
 					</div>
 				</div>
