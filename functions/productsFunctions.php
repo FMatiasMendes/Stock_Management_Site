@@ -40,4 +40,10 @@ function deleteProduct($id){
   iduSQL("DELETE FROM products WHERE id='$id'");
 }
 
+//to search for ID or name
+function searchProduct($search){
+  $list =	selectSQL("SELECT * FROM products WHERE id='$search' or name LIKE '%$search%'");
+	return $list;
+}
+
 ?>

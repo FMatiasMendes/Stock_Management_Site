@@ -3,8 +3,16 @@
 	require("functions/productsFunctions.php");
 
 	$page = "PRODUCTS LIST";
+	
+	$form1 = isset($_GET["search"]);
 
-	$listProducts = listProducts();
+	if ($form1){
+		$search = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
+		$listProducts = searchProduct($search);
+	}
+	else{
+		$listProducts = listProducts();
+	}
 
 ?>
 
@@ -54,9 +62,9 @@
 						<input type="submit" name="" value="LIST" class="list-button">
 						
 						<div class="search-div">			
-							<form action="" class="search-form">
-								<input type="number" name="id" placeholder="ID SEARCH">
-								<button type="submit" name="" value="" class="list-button search-button">SEARCH</button>
+							<form action="productsList.php" class="search-form" method="get">
+								<input type="text" name="search" placeholder="SEARCH">
+								<button type="submit" name="button" class="list-button search-button">SEARCH</button>
 							</form>
 						</div>
 					</div>
