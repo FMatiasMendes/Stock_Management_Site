@@ -13,7 +13,6 @@
 body{
 	background-color: hsla(0, 3%, 94%, 0.5);
 	min-width: 1250px;
-
 	display: flex;
   	flex-direction: column;
   	min-height: 100vh;
