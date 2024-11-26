@@ -19,7 +19,7 @@
 	}
 
 	function loginStatus(){
-			return !empty($_SESSION["logged_user"]);
+		return !empty($_SESSION["logged_user"]);
 	}
 
 ?>

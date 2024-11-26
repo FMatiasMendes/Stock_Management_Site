@@ -1,7 +1,18 @@
 <?php
 	
-	
+	require_once("functions/loginFunction.php");
 
+	$form = isset ($_POST["user"]) && isset ($_POST["pass"]);
+
+	if ($form){
+		$user = $_POST["user"];
+		$pass = $_POST["pass"];
+
+		if(login($user, $pass)){
+			header("Location: home.php");
+			exit();
+		}
+	}
 
 ?>
 
