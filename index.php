@@ -62,8 +62,14 @@
 					<input type="password" name="pass" placeholder="password" required="required" class="login-input">
 					<br><br>
 					<button type="submit" name="login" class="login-button">Login</button>
-
 				</form>
+
+				<div class="guest-credentials">
+					<h3>HEY!!! If you want to test this page, use this credentials:</h3>
+					<br>
+					<p><b>User:</b> guest</p>
+					<p><b>Password:</b> welcome</p>
+				</div>
 			</div>
 		</main>
 

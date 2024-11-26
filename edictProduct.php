@@ -137,19 +137,3 @@
 			
 	</body>
 </html>
-
-
-
-
-<?php if (!empty($id) && !empty($name) && !empty($price) && !empty($quantity)): ?>
-
-	<?php else: ?>
-
-<!-- titulo -->
-<div class="row justify-content-center mt-3 mt-md-4 pt-2 px-1">
-	<div class="col-11 col-md-9 col-lg-10 px-3 text-center">
-		<h1>Página não encontrada!</h1>
-	</div>
-</div>
-
-<?php endif; ?>

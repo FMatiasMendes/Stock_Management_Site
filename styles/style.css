@@ -13,7 +13,14 @@
 body{
 	background-color: hsla(0, 3%, 94%, 0.5);
 	min-width: 1250px;
-	height: 100%; /* change height to view height?! */
+
+	display: flex;
+  	flex-direction: column;
+  	min-height: 100vh;
+}
+
+main{
+	flex: 1;
 }
 
 /* ---- header ---- */
@@ -36,11 +43,11 @@ body{
 
 .index-image{
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 35px;
 }
 
 .index-image img{
-	height: 250px;
+	height: 150px;
 }
 
 .login-form-div{
@@ -85,6 +92,11 @@ body{
 	margin-top: 10px;
 	font-family: var(--font-family);
 	color: red;
+}
+
+.guest-credentials{
+	font-family: var(--font-family);
+	margin-top: 30px;
 }
 
 .nav-links{
@@ -133,12 +145,18 @@ body{
 
 .welcome-message{
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 28px;
 }
 
 .last-login-message{
-	font-size: 12px;
+	font-size: 16px;
 	margin-top: 30px;
+}
+
+.disclaimer{
+	font-family: var(--font-family);
+	font-size: 14px;
+	margin-top: 40px;
 }
 
 .delete-message{
@@ -374,11 +392,8 @@ tr:has(.th-content):hover{
 footer{
 	font-family: var(--font-family);
 	text-align: center;
-	position: fixed;
-	bottom: 0;
 	width: 100%;
-	margin: 10px;
-
+	margin-bottom: 10px;
 }
 
 footer a{

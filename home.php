@@ -23,6 +23,10 @@
 			<div class="outer-border">
 				<p class="welcome-message">Welcome <?= $logged_user["user"]; ?>!</p>
 				<p class="last-login-message">Last time you were here: <?= $logged_user["last_access"]; ?>!</p>
+				<p class="disclaimer">
+					Please use this website with care. It has been created for you to test all its features.
+					Other users will follow to further test the site.
+				</p>
 			</div>
 
 		</main>
