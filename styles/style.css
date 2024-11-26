@@ -94,6 +94,11 @@ body{
 	margin-top: 20px;
 }
 
+.normal-text{
+	font-weight: bold;
+	font-size: 30px;
+}
+
 .page-titles{
 	color: var(--text-color);
 	font-family: var(--font-family);
@@ -216,58 +221,13 @@ tr:hover{
 	background-color: rgba(0, 255, 255, 1);
 }
 
-/* .th-div{
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-	height: 100%;
-    position: relative;
-	height: 35px;
-	border: 1px solid red;
-}
-
-.arrows-div {
-    display: block;
-    justify-content: center;
-    align-items: center;
-	position: absolute;
-    right: 5px;
-    top: 11%; 
-    text-align: center;
-	gap: 15px;
-}
-
-.asc-arrow,
-.desc-arrow{
-	display: flex;
-	align-items: center;
-	margin: 0;
-	padding: 0;
-	height: 10px;
-
-	border: 1px solid red;
-}
-
-.arrow-button{
-	background-color: transparent;
-    border: none;
-    color: rgb(10, 77, 77);
-    cursor: pointer;
-    pointer-events: auto;
-	height: 15px;
-
-	border: 1px solid blue;
-} */
- 
-
 .th-content{
 	display: flex;
-	justify-content: space-between; /* Espaça os elementos horizontalmente */
-	align-items: center; /* Centraliza verticalmente */
-	padding: 0 5px; /* Opcional: ajusta o espaçamento interno */
-	height: 50px;
-	box-sizing: border-box; /* Inclui o padding no cálculo do tamanho */
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5px;
+	height: 40px;
+	box-sizing: border-box;
 }
 
 .th-name{
@@ -277,9 +237,9 @@ tr:hover{
 
 .arrows{
 	display: flex;
-	flex-direction: column; /* Coloca as setas em coluna */
-	align-items: center; /* Centraliza horizontalmente */
-	gap: 5px; /* Espaçamento entre as setas */
+	flex-direction: column;
+	align-items: center;
+	gap: 2px;
 }
 
 .arrow-button{

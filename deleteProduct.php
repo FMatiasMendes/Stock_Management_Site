@@ -90,11 +90,12 @@
 			<?php elseif($form2 && $id <= 15): ?>
 				<div class="outer-border">
 					<p class="delete-message">
-						SORRY!!!
+						<span style="font-size: 26px">SORRY!!!</span>
 						<br><br>
-						To ensure that there are always products registered for people to test the website, products with ID up to 15 cannot be deleted! 
+						To ensure that there are always products registered for people to test the website, 
+							products with ID up to 15 cannot be deleted!
 						<br>
-						Try one with ID 16 or higher! 
+						Try one with ID 16 or higher!
 					</p>
 				</div>
 			<?php endif; ?>
