@@ -43,6 +43,44 @@ body{
 	height: 250px;
 }
 
+.login-form-div{
+	margin-top: 20px;
+}
+
+.login-text{
+	font-family: var(--font-family);
+	color: black;
+}
+
+.login-input{
+	font-family: var(--font-family);
+	color: black;
+	height: 25px;
+	width: 150px;
+	border: 2px solid;
+	border-color: var(--border-color);
+	border-radius: 5px;
+	padding: 0px 5px;
+}
+
+.login-button{
+	color: var(--text-color);
+	width: 90px;
+	padding: 3px 0px;
+	border: 1px solid;
+	border-color: var(--text-color);
+	border-radius: 25px;
+	background-color: transparent;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.5s ease;
+}
+
+.login-button:hover{
+	background-color: var(--text-color);
+	color: white;
+}
+
 .nav-links{
 	list-style-type: none;
 	display: flex;

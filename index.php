@@ -26,7 +26,18 @@
 		<main>
 			<div class="outer-border">
 				<h3 class="main-title">LOGIN</h3>
+				<form action="home.php" method="post" class="login-form-div">
+					<label for="user" class="login-text">USER</label>
+					<br>
+					<input type="text" name="user" placeholder="user" required autofocus class="login-input">
+					<br><br>
+					<label for="pass" class="login-text">PASSWORD</label>
+					<br>
+					<input type="password" name="pass" placeholder="password" required="required" class="login-input">
+					<br><br>
+					<button type="submit" name="login" class="login-button">Login</button>
 
+				</form>
 			</div>
 		</main>
 
