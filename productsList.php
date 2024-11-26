@@ -74,56 +74,68 @@
 					</div>
 				</div>
 			
-				<table>
-					<tr>
-						<th>
-							<div class="th-content">
-								<div class="th-name">ID</div>
-								<div class="arrows-div">
-									<button class="arrow-button">&#11205;</button>
-									<button class="arrow-button">&#11206;</button>
-								</div>
-							</div>
-						</th>
-						<th class="name-column">
-							<div class="th-content">
-								<div class="th-name">NAME</div>
-								<div class="arrows-div">
-									<button class="arrow-button">&#11205;</button>
-									<button class="arrow-button">&#11206;</button>
-								</div>
-							</div>
-						</th>
-						<th>
-							<div class="th-content">
-								<div class="th-name">PRICE</div>
-								<div class="arrows-div">
-									<button class="arrow-button">&#11205;</button>
-									<button class="arrow-button">&#11206;</button>
-								</div>
-							</div>
-						</th>
-						<th>
-							<div class="th-content">
-								<div class="th-name">QUANTITY</div>
-								<div class="arrows-div">
-									<button class="arrow-button">&#11205;</button>
-									<button class="arrow-button">&#11206;</button>
-								</div>
-							</div>
-						</th>
-					</tr>
-
-					<?php foreach ($listProducts as $i => $l): ?>
+					<table>
 						<tr>
-							<td><?= $l["id"]; ?></td>
-							<td><?= $l["name"]; ?></td>
-							<td><?= number_format($l["price"], 2); ?> €</td>
-							<td><?= $l["quantity"]; ?></td>
+							<th>
+								<div class="th-content">
+									<div class="th-name">ID</div>
+									<div>
+										<form action="productsList.php" method="get" class="arrows">
+											<input type="hidden" name="column" value="id">
+											<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
+											<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
+										</form>
+									</div>
+								</div>
+							</th>
+							<th class="name-column">
+								<div class="th-content">
+									<div class="th-name">NAME</div>
+									<div>
+									<form action="productsList.php" method="get" class="arrows">
+											<input type="hidden" name="column" value="name">
+											<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
+											<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
+										</form>
+									</div>
+								</div>
+							</th>
+							<th>
+								<div class="th-content">
+									<div class="th-name">PRICE</div>
+									<div>
+									<form action="productsList.php" method="get" class="arrows">
+											<input type="hidden" name="column" value="price">
+											<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
+											<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
+										</form>
+									</div>
+								</div>
+							</th>
+							<th>
+								<div class="th-content">
+									<div class="th-name">QUANTITY</div>
+									<div>
+									<form action="productsList.php" method="get" class="arrows">
+											<input type="hidden" name="column" value="quantity">
+											<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
+											<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
+										</form>
+									</div>
+								</div>
+							</th>
 						</tr>
-					<?php endforeach; ?>
 
-				</table>
+						<?php foreach ($listProducts as $i => $l): ?>
+							<tr>
+								<td><?= $l["id"]; ?></td>
+								<td><?= $l["name"]; ?></td>
+								<td><?= number_format($l["price"], 2); ?> €</td>
+								<td><?= $l["quantity"]; ?></td>
+							</tr>
+						<?php endforeach; ?>
+
+					</table>
 			</div>
 		</main>
 

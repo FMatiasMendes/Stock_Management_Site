@@ -275,7 +275,7 @@ tr:hover{
 	flex: 1;
 }
 
-.arrows-div{
+.arrows{
 	display: flex;
 	flex-direction: column; /* Coloca as setas em coluna */
 	align-items: center; /* Centraliza horizontalmente */

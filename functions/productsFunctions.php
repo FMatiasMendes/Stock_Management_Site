@@ -46,4 +46,10 @@ function searchProduct($search){
 	return $list;
 }
 
+//to order ascending/descending by column
+function ascendingOrderId($column, $order){
+  $list = selectSQL("SELECT * FROM products ORDER BY $column $order");
+  return $list;
+}
+
 ?>
