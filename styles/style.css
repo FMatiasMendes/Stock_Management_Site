@@ -34,6 +34,15 @@ body{
 	text-align: center;
 }
 
+.index-image{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.index-image img{
+	height: 250px;
+}
+
 .nav-links{
 	list-style-type: none;
 	display: flex;

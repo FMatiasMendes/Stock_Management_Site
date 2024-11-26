@@ -8,25 +8,26 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Stock Management</title>
-		<link rel="shortcut icon" href="images/background.jpg" type="image/x-icon">
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="styles/style.css">
 	</head>
 
 	<body>
 
 		<header>
-			<?php require("components/header.php"); ?>
+			<div class="outer-border">
+				<h1 class="main-title">STOCK MANAGEMENT</h1>
+				<div class="index-image">
+					<img src="images/stock_image.png" alt="image">
+				</div>
+			</div>			
 		</header>
 		
 		<main>
-
 			<div class="outer-border">
-				<!-- php edition missing (name) -->
-				<p class="welcome-message">Welcome Filipe!</p>
-				<!-- php edition missing (date) -->
-				<p class="last-login-message">Last time you were here: dd/mm/yyyy at xx:xxH.</p>
-			</div>
+				<h3 class="main-title">LOGIN</h3>
 
+			</div>
 		</main>
 
 		<footer>
