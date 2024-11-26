@@ -24,11 +24,12 @@
 
 		if($id !== FALSE){
 			$product = getProductById($id);
+
 			if (empty($product["id"])){
 				header("Location: error404.php");
       	exit();
 			}
-		}		
+		}
 	}
 
 	$form3 = isset($_GET['option']);
@@ -68,7 +69,7 @@
 		</header>
 		
 		<main>
-			<?php if($form2): ?>
+			<?php if($form2 && $id > 15): ?>
 				<div class="outer-border">
 					<p class="delete-message">Are you shure you want to delete 
 						<b><?= $product['name'] ?? ''; ?> (ID <?= $product['id'] ?? ''; ?>)</b>?
@@ -85,6 +86,16 @@
 							<input type="submit" name="option" value="NO" class="cancel-button">
 						</form>
 					</div>
+				</div>
+			<?php elseif($form2 && $id <= 15): ?>
+				<div class="outer-border">
+					<p class="delete-message">
+						SORRY!!!
+						<br><br>
+						To ensure that there are always products registered for people to test the website, products with ID up to 15 cannot be deleted! 
+						<br>
+						Try one with ID 16 or higher! 
+					</p>
 				</div>
 			<?php endif; ?>
 
