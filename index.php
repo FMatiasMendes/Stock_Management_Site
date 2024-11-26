@@ -1,5 +1,8 @@
 <?php
-	$page = "HOME";
+	
+	
+
+
 ?>
 
 <!DOCTYPE html>
