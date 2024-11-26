@@ -76,20 +76,42 @@
 			
 				<table>
 					<tr>
-						<th>ID</th>
-						<th class="name-column">NAME</th>
-						<th>PRICE</th>
-						<th class="th-div">
-							QUANTITY
-							<div class="arrows-div">
-								<div class="asc-arrow">
+						<th>
+							<div class="th-content">
+								<div class="th-name">ID</div>
+								<div class="arrows-div">
 									<button class="arrow-button">&#11205;</button>
-								</div>
-								<div class="desc-arrow">
 									<button class="arrow-button">&#11206;</button>
 								</div>
 							</div>
-						</th>						
+						</th>
+						<th class="name-column">
+							<div class="th-content">
+								<div class="th-name">NAME</div>
+								<div class="arrows-div">
+									<button class="arrow-button">&#11205;</button>
+									<button class="arrow-button">&#11206;</button>
+								</div>
+							</div>
+						</th>
+						<th>
+							<div class="th-content">
+								<div class="th-name">PRICE</div>
+								<div class="arrows-div">
+									<button class="arrow-button">&#11205;</button>
+									<button class="arrow-button">&#11206;</button>
+								</div>
+							</div>
+						</th>
+						<th>
+							<div class="th-content">
+								<div class="th-name">QUANTITY</div>
+								<div class="arrows-div">
+									<button class="arrow-button">&#11205;</button>
+									<button class="arrow-button">&#11206;</button>
+								</div>
+							</div>
+						</th>
 					</tr>
 
 					<?php foreach ($listProducts as $i => $l): ?>

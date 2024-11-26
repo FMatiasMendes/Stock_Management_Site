@@ -67,8 +67,6 @@
 		
 		<main>
 
-		
-
 			<?php if($form2): ?>
 				<div class="outer-border">
 					<!-- make div appear/disappear -->

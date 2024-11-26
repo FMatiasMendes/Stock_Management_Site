@@ -216,7 +216,7 @@ tr:hover{
 	background-color: rgba(0, 255, 255, 1);
 }
 
-.th-div{
+/* .th-div{
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -224,7 +224,7 @@ tr:hover{
 	height: 100%;
     position: relative;
 	height: 35px;
-	border: none;
+	border: 1px solid red;
 }
 
 .arrows-div {
@@ -235,6 +235,7 @@ tr:hover{
     right: 5px;
     top: 11%; 
     text-align: center;
+	gap: 15px;
 }
 
 .asc-arrow,
@@ -257,9 +258,39 @@ tr:hover{
 	height: 15px;
 
 	border: 1px solid blue;
+} */
+ 
+
+.th-content{
+	display: flex;
+	justify-content: space-between; /* Espaça os elementos horizontalmente */
+	align-items: center; /* Centraliza verticalmente */
+	padding: 0 5px; /* Opcional: ajusta o espaçamento interno */
+	height: 50px;
+	box-sizing: border-box; /* Inclui o padding no cálculo do tamanho */
 }
 
-tr:has(.th-div):hover{
+.th-name{
+	text-align: center;
+	flex: 1;
+}
+
+.arrows-div{
+	display: flex;
+	flex-direction: column; /* Coloca as setas em coluna */
+	align-items: center; /* Centraliza horizontalmente */
+	gap: 5px; /* Espaçamento entre as setas */
+}
+
+.arrow-button{
+	pointer-events: auto;
+	cursor: pointer;
+	background-color: transparent;
+    border: none;
+    color: rgb(10, 77, 77);
+}
+
+tr:has(.th-content):hover{
 	background-color: transparent;
 }
 
