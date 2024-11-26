@@ -3,15 +3,30 @@
 	require("functions/productsFunctions.php");
 
 	$page = "PRODUCTS LIST";
+	$column = "id";
+	$order = "ASC";
 	
-	$form1 = isset($_GET["search"]);
+	$form1 = isset($_GET["search"]);	
 
 	if ($form1){
 		$search = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
-		$listProducts = searchProduct($search);
+		$listProducts = searchProduct($search, $column, $order);
 	}
 	else{
 		$listProducts = listProducts();
+	}
+
+	$form2 = isset($_GET["column"]) && isset($_GET["order"]);
+
+	if($form2){
+		$column = filter_input(INPUT_GET, 'column', FILTER_SANITIZE_STRING);
+		$order = filter_input(INPUT_GET, 'order', FILTER_SANITIZE_STRING);
+
+		if ($form1) {
+			$listProducts = searchProduct($search, $column, $order); 
+		} else {
+			$listProducts = ascendingOrder($column, $order);
+		}
 	}
 
 ?>
@@ -40,7 +55,7 @@
 				<div class="main-title-div">
 					<div class="list-div">
 						<h3 class="page-titles">PRODUCTS LIST</h3>				
-						<div class="column-selector">
+						<!-- <div class="column-selector">
 							<label for="">Column</label>
 							<select name="column" id="column">
 								<option value="id">ID</option>
@@ -61,7 +76,7 @@
 								<input type="radio" name="order" value="descending">
 							</div>
 						</div>
-						<input type="submit" name="" value="LIST" class="list-button">
+						<input type="submit" name="" value="LIST" class="list-button"> -->
 						
 						<div class="search-div">			
 							<form action="productsList.php" class="search-form" method="get">
@@ -81,6 +96,7 @@
 									<div class="th-name">ID</div>
 									<div>
 										<form action="productsList.php" method="get" class="arrows">
+											<input type="hidden" name="search" value="<?= isset($search) ? $search : '' ?>">
 											<input type="hidden" name="column" value="id">
 											<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
 											<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
@@ -93,6 +109,7 @@
 									<div class="th-name">NAME</div>
 									<div>
 									<form action="productsList.php" method="get" class="arrows">
+										<input type="hidden" name="search" value="<?= isset($search) ? $search : '' ?>">
 											<input type="hidden" name="column" value="name">
 											<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
 											<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
@@ -105,10 +122,11 @@
 									<div class="th-name">PRICE</div>
 									<div>
 									<form action="productsList.php" method="get" class="arrows">
-											<input type="hidden" name="column" value="price">
-											<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
-											<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
-										</form>
+										<input type="hidden" name="search" value="<?= isset($search) ? $search : '' ?>">
+										<input type="hidden" name="column" value="price">
+										<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
+										<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
+									</form>
 									</div>
 								</div>
 							</th>
@@ -117,10 +135,11 @@
 									<div class="th-name">QUANTITY</div>
 									<div>
 									<form action="productsList.php" method="get" class="arrows">
-											<input type="hidden" name="column" value="quantity">
-											<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
-											<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
-										</form>
+										<input type="hidden" name="search" value="<?= isset($search) ? $search : '' ?>">
+										<input type="hidden" name="column" value="quantity">
+										<button type=submit name="order" value="ASC" class="arrow-button">&#11205;</button>
+										<button type=submit name="order" value="DESC" class="arrow-button">&#11206;</button>
+									</form>
 									</div>
 								</div>
 							</th>
@@ -145,6 +164,3 @@
 			
 	</body>
 </html>
-
-<th>&#11205;</th>
-<th>&#x2BC5;</th>

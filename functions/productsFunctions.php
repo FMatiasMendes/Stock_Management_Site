@@ -41,13 +41,13 @@ function deleteProduct($id){
 }
 
 //to search for ID or name
-function searchProduct($search){
-  $list =	selectSQL("SELECT * FROM products WHERE id='$search' or name LIKE '%$search%'");
+function searchProduct($search, $column, $order){
+  $list =	selectSQL("SELECT * FROM products WHERE id='$search' or name LIKE '%$search%' ORDER BY $column $order");
 	return $list;
 }
 
 //to order ascending/descending by column
-function ascendingOrderId($column, $order){
+function ascendingOrder($column, $order){
   $list = selectSQL("SELECT * FROM products ORDER BY $column $order");
   return $list;
 }
