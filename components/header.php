@@ -1,3 +1,17 @@
+<?php
+
+	require_once("functions/loginFunction.php");
+
+	if(!loginStatus()){
+		header("Location: index.php");
+		exit();
+	}
+	else{
+		$logged_user = $_SESSION["logged_user"];
+	}
+
+?>
+
 <div class="outer-border">
 	<h1 class="main-title">STOCK MANAGEMENT</h1>
 	<nav>
@@ -20,7 +34,7 @@
 			<li><a href="transactionRegister.php" class="<?= ($page == "TRANSACTION REGISTER") ? "link-active" : ""; ?>">
 				TRANSACTION REGISTER
 			</a></li>
-			<li><a href="index.php">
+			<li><a href="logout.php">
 				LOGOUT
 			</a></li>
 		</ul>

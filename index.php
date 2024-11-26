@@ -2,15 +2,20 @@
 	
 	require_once("functions/loginFunction.php");
 
+	$error_message = null;
+
 	$form = isset ($_POST["user"]) && isset ($_POST["pass"]);
 
-	if ($form){
-		$user = $_POST["user"];
-		$pass = $_POST["pass"];
+	if ($form){		
+		$user = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_STRING);
+		$pass = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_STRING);
 
 		if(login($user, $pass)){
 			header("Location: home.php");
 			exit();
+		}
+		else {
+			$error_message = "Invalid login!";
 		}
 	}
 
@@ -40,7 +45,14 @@
 		<main>
 			<div class="outer-border">
 				<h3 class="main-title">LOGIN</h3>
-				<form action="home.php" method="post" class="login-form-div">
+				
+				<?php if($error_message): ?>
+					<div class="login-message">
+							Invalid login!
+					</div>
+				<?php endif; ?>
+
+				<form action="index.php" method="post" class="login-form-div">
 					<label for="user" class="login-text">USER</label>
 					<br>
 					<input type="text" name="user" placeholder="user" required autofocus class="login-input">

@@ -81,6 +81,12 @@ body{
 	color: white;
 }
 
+.login-message{
+	margin-top: 10px;
+	font-family: var(--font-family);
+	color: red;
+}
+
 .nav-links{
 	list-style-type: none;
 	display: flex;

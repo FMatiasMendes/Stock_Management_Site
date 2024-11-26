@@ -1,10 +1,12 @@
 <?php
 
+	require_once("sqlFunctions.php");
+
 	session_start();
 	date_default_timezone_set("Europe/Lisbon");
 
 	function login($user, $pass){
-			$logged_user = selectSQLUnico("SELECT * FROM users WHERE user='$user' AND $pass='$pass'"); 
+			$logged_user = selectSpecificSQL("SELECT * FROM users WHERE user='$user' AND password='$pass'"); 
 			
 			if(!empty($logged_user)){
 
