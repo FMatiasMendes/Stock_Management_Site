@@ -21,10 +21,8 @@
 		<main>
 
 			<div class="outer-border">
-				<!-- php edition missing (name) -->
-				<p class="welcome-message">Welcome Filipe!</p>
-				<!-- php edition missing (date) -->
-				<p class="last-login-message">Last time you were here: dd/mm/yyyy at xx:xxH.</p>
+				<p class="welcome-message">Welcome <?= $logged_user["user"]; ?>!</p>
+				<p class="last-login-message">Last time you were here: <?= $logged_user["last_access"]; ?>!</p>
 			</div>
 
 		</main>
