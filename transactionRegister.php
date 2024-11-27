@@ -24,9 +24,13 @@
 		$id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 		$action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 
-		if($id !== FALSE){
+		if($id !== FALSE && $action !== FALSE){
 			$product = getProductById($id);
 			if (empty($product["id"])){
+				header("Location: error404.php");
+				exit();
+			}
+			elseif($action !== 'sell' && $action !== 'buy'){
 				header("Location: error404.php");
 				exit();
 			}
@@ -49,10 +53,6 @@
 				elseif($action == 'sell'){
 					$initialQuantity = $product['quantity'];
 					$updatedQuantity = $initialQuantity - $quantity;					
-				}
-				elseif($action !== 'sell' && $action == 'buy'){
-					header("Location: error404.php");
-					exit();					
 				}
 				updateProductQuantity($updatedQuantity, $id);
 				$listProducts = listProducts();
@@ -93,7 +93,7 @@
 						<form action="transactionRegister.php" class="search-form form-top-margin" method="get">
 							<input type="hidden" name="id" value="<?= $product["id"]; ?>">
 							<input type="hidden" name="action" value="<?= $action; ?>">
-							<input type="number" name="quantity" placeholder="Quantity" min="0" max="999999" step="1"><br>
+							<input type="number" name="quantity" placeholder="Quantity" min="0" max="999999" step="1" required autofocus><br>
 							<button type="submit" name="option" value="register" class="save-button">REGISTER</button>
 							<button type="submit" name="option" value="cancel" class="cancel-button">CANCEL</button>
 						</form>
