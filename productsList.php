@@ -22,10 +22,22 @@
 		$column = filter_input(INPUT_GET, 'column', FILTER_SANITIZE_STRING);
 		$order = filter_input(INPUT_GET, 'order', FILTER_SANITIZE_STRING);
 
-		if ($form1) {
-			$listProducts = orderSearchProduct($search, $column, $order); 
-		} else {
-			$listProducts = ascendingOrder($column, $order);
+		if($order == 'ASC' or $order == 'DESC'){
+			if($column == 'id' or $column == 'name' or $column == 'price' or $column == 'quantity'){
+				if ($form1) {
+					$listProducts = orderSearchProduct($search, $column, $order); 
+				} else {
+					$listProducts = ascendingOrder($column, $order);
+				}
+			}
+			else{
+				header("Location: error404.php");
+				exit();
+			}
+		}
+		else{
+			header("Location: error404.php");
+			exit();
 		}
 	}
 
