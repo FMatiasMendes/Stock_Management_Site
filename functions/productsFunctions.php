@@ -41,7 +41,13 @@ function deleteProduct($id){
 }
 
 //to search for ID or name
-function searchProduct($search, $column, $order){
+function searchProduct($search){
+  $list =	selectSQL("SELECT * FROM products WHERE id='$search' or name LIKE '%$search%'");
+	return $list;
+}
+
+//to search for ID or name and order by column
+function orderSearchProduct($search, $column, $order){
   $list =	selectSQL("SELECT * FROM products WHERE id='$search' or name LIKE '%$search%' ORDER BY $column $order");
 	return $list;
 }

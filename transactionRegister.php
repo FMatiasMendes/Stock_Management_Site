@@ -28,7 +28,7 @@
 			$product = getProductById($id);
 			if (empty($product["id"])){
 				header("Location: error404.php");
-      			exit();
+				exit();
 			}
 		}
 	}
@@ -49,6 +49,10 @@
 				elseif($action == 'sell'){
 					$initialQuantity = $product['quantity'];
 					$updatedQuantity = $initialQuantity - $quantity;					
+				}
+				elseif($action !== 'sell' && $action == 'buy'){
+					header("Location: error404.php");
+					exit();					
 				}
 				updateProductQuantity($updatedQuantity, $id);
 				$listProducts = listProducts();

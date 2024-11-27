@@ -10,7 +10,7 @@
 
 	if ($form1){
 		$search = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
-		$listProducts = searchProduct($search, $column, $order);
+		$listProducts = orderSearchProduct($search, $column, $order);
 	}
 	else{
 		$listProducts = listProducts();
@@ -23,7 +23,7 @@
 		$order = filter_input(INPUT_GET, 'order', FILTER_SANITIZE_STRING);
 
 		if ($form1) {
-			$listProducts = searchProduct($search, $column, $order); 
+			$listProducts = orderSearchProduct($search, $column, $order); 
 		} else {
 			$listProducts = ascendingOrder($column, $order);
 		}
