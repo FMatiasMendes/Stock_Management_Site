@@ -35,7 +35,6 @@
 		</header>
 		
 		<main>
-		<!-- consider make the ascending/descending order with arrows on each column -->
 			<div class="outer-border">
 				<h3 class="page-titles">REGISTER NEW PRODUCT</h3>				
 				<form action="registerProduct.php" class="search-form form-top-margin" method="get">
@@ -46,14 +45,12 @@
 				</form>
 				<div>	
 					<?php if($form): ?>		
-						<p class="product-registered-message">
-							<!-- ---------------ID not working. Shows the first with the same name.----------------------- -->						
+						<p class="product-registered-message">					
 							<?= ($name); ?> ID: (<?= $product['id']; ?>) registered with sucess! 					
 						</p>
 					<?php endif; ?>	
 				</div>
 			</div>
-
 		</main>
 
 		<footer>

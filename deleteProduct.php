@@ -74,11 +74,6 @@
 					<p class="delete-message">Are you shure you want to delete 
 						<b><?= $product['name'] ?? ''; ?> (ID <?= $product['id'] ?? ''; ?>)</b>?
 					</p>
-					<!-- correct this condition -->
-					<!-- <?php if ($product === null): ?> -->
-						<!-- <p class='error-message'>Product not found.</p> -->
-					<!-- <?php endif; ?> -->			
-
 					<div>
 						<form action="deleteProduct.php" class="search-form" method="get">
 							<input type="hidden" name="id" value="<?= $product['id'] ?? ''; ?>">
@@ -87,7 +82,7 @@
 						</form>
 					</div>
 				</div>
-			<?php elseif($form2 && $id <= 15): ?>
+			<?php elseif($form2 && $id <= 15): ?>				
 				<div class="outer-border">
 					<p class="delete-message">
 						<span style="font-size: 26px">SORRY!!!</span>

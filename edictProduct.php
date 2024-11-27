@@ -69,7 +69,6 @@
 
 			<?php if($form2): ?>
 				<div class="outer-border">
-					<!-- make div appear/disappear -->
 					<h4 class="page-titles">
 						EDICT PRODUCT (ID: <?= htmlspecialchars($product["id"] ?? ''); ?>)
 					</h4>
