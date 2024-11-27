@@ -120,7 +120,7 @@
 							<td><?= htmlspecialchars($l["quantity"]); ?></td>
 							<td>
 							<form action="edictProduct.php" method="get">
-								<button type="submit" name="edict" value="<?= $l["id"]; ?>" class="edict-button js-div-display">EDICT</button>
+								<button type="submit" name="edict" value="<?= $l["id"]; ?>" class="edict-button">EDICT</button>
 							</form>
 						</tr>
 					<?php endforeach; ?>
