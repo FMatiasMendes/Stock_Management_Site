@@ -28,7 +28,7 @@
 			<li><a href="edictProduct.php" class="<?= ($page == "EDICT PRODUCT") ? "link-active" : ""; ?>">
 				EDICT PRODUCT
 			</a></li>
-			<li><a href="deleteProduct.php" class="<?= ($page == `DELETE PRODUCT`) ? "link-active" : ""; ?>">
+			<li><a href="deleteProduct.php" class="<?= ($page == "DELETE PRODUCT") ? "link-active" : ""; ?>">
 				DELETE PRODUCT
 			</a></li>
 			<li><a href="transactionRegister.php" class="<?= ($page == "TRANSACTION REGISTER") ? "link-active" : ""; ?>">

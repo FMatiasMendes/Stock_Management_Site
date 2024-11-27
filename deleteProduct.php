@@ -2,7 +2,7 @@
 
 	require_once("functions/productsFunctions.php");
 
-	$page = `DELETE PRODUCT`;
+	$page = "DELETE PRODUCT";
 	$listProducts = listProducts();
 	$id = null;
 	$product = null;
